@@ -123,15 +123,15 @@ Custom buttons and input components
 
 The project is designed using Java Object-Oriented Programming principles, including:
 
-Classes and Objects
-Encapsulation
-Constructors
-Inheritance
-Abstraction
-Polymorphism
-Interfaces
-Method Overriding
-Exception Handling
-Modular class design
+1)Classes and Objects
+2)Encapsulation
+3)Constructors
+4)Inheritance
+5) Abstraction
+6) Polymorphism
+7) Interfaces
+8) Method Overriding
+9) Exception Handling
+10) Modular class design
 
 The system is divided into separate model, service, network, and GUI classes to make the application easier to understand, maintain, and extend.
