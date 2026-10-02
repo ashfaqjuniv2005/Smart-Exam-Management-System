@@ -2,7 +2,7 @@ package smartassessment.model;
 
 import java.io.Serializable;
 
-/** One suspicious action recorded during the exam. */
+
 public class CheatEvent implements Serializable {
     private static final long serialVersionUID = 1L;
 
