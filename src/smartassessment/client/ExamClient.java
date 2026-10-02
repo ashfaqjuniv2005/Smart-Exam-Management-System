@@ -9,10 +9,10 @@ import smartassessment.model.ExamPacket;
 import smartassessment.model.Message;
 import smartassessment.model.StudentInfo;
 
-/** Student-side network connection to the teacher's server. */
+
 public class ExamClient {
 
-    /** Callbacks (called from the reader thread - use SwingUtilities.invokeLater in the GUI). */
+   
     public interface Listener {
         void onForceSubmit(String reason);
         void onBroadcast(String text);
@@ -33,7 +33,7 @@ public class ExamClient {
     public boolean isConnected() { return connected; }
     public StudentInfo getInfo() { return info; }
 
-    /** Connects and authenticates. Throws AuthException when the server refuses. */
+   
     public synchronized ExamPacket connect(String host, int port, StudentInfo info)
             throws IOException, AuthException {
         this.host = host;
@@ -42,7 +42,7 @@ public class ExamClient {
         return open();
     }
 
-    /** Re-opens the connection after a network failure. */
+   
     public synchronized ExamPacket reconnect() throws IOException, AuthException {
         return open();
     }
@@ -98,7 +98,7 @@ public class ExamClient {
                     }
                 }
             } catch (Exception ex) {
-                // connection closed or broken
+             
             } finally {
                 synchronized (ExamClient.this) {
                     if (in == stream) {
@@ -113,7 +113,7 @@ public class ExamClient {
         t.start();
     }
 
-    /** Sends a message; returns false when the connection is down. */
+   
     public synchronized boolean send(Message m) {
         if (!connected) return false;
         try {
